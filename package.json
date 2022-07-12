@@ -2,15 +2,26 @@
   "name": "rijksoverheid",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon"
+    "start": "nodemon index.ts"
   },
-  "author": "Mees",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meesvanderkevie/Rijksoverheid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meesvanderkevie/Rijksoverheid/issues"
+  },
+  "homepage": "https://github.com/meesvanderkevie/Rijksoverheid#readme",
   "dependencies": {
-    "discord.js": "^13.7.0",
-    "nodemon": "^2.0.16"
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.18",
+    "wokcommands": "^1.5.3"
   }
 }

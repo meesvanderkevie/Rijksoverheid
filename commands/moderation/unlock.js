@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args, prefix) => {
 
     await message.channel.permissionOverwrites.set([
         {
-            id: message.guild.roles.cache.find(r => r.name === "Burger").id,
+            id: message.guild.roles.cache.find(r => r.id === "988872200620769390").id,
             allow: ["SEND_MESSAGES"]
         }
     ]);

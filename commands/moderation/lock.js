@@ -1,4 +1,4 @@
-const discord = require('discord.js');
+const {MessageEmbed, discord } = require('discord.js');
 
 module.exports.run = async (client, message, args, prefix) => {
     const geenPermsEmbed = new MessageEmbed()

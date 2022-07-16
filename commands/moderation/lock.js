@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args, prefix) => {
     ]);
 
     const lockEmbed = new MessageEmbed()
-    .setTitle(`Channel is locked - By: ${message.user.tag}`)
+    .setTitle(`Channel is locked - By: ${message.user}`)
     .setColor("RED")
 
     await message.channel.send({embeds: [lockEmbed]})

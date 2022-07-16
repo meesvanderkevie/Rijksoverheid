@@ -7,14 +7,7 @@ module.exports.run = async (client, message, args, prefix) => {
 
     if(!message.member.permissions.has('MANAGE_MESSAGES')) return message.reply({embeds: [geenPermsEmbed]});
 
-    if(!args[0]) return message.channel.send(`${message.author}, Geef een nummer op.`);
-    if(isNaN(args[0])) return message.reply(`${message.author}, Dat is geen nummer, ga naar een inrichting ofzo..`);
-    if(args[0] > 100) return message.reply(`${message.author}, Dat is te groot, max 100.`);
-    if(args[0] < 1) return message.reply(`${message.author}, BRUH.`);
-
-    message.channel.bulkDelete(args[0] + 1).then(() => {
-        message.channel.send(`${message.author}, Er zijn ${args[0]} berichten verwijderd.`);
-    });
+    message.reply('Deze command is in onderhoud.')
 };
 
 module.exports.help = {

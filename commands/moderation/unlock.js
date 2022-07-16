@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args, prefix) => {
         }
     ]);
 
-    const unlockEmbed = new discord.MessageEmbed()
+    const unlockEmbed = new MessageEmbed()
     .setTitle("Channel is unlocked!")
     .setColor("GREEN")
 

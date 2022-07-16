@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args, prefix) => {
         }
     ]);
 
-    const lockEmbed = new discord.MessageEmbed()
+    const lockEmbed = new MessageEmbed()
     .setTitle(`Channel is locked - By: ${message.user.id}`)
     .setColor("RED")
 

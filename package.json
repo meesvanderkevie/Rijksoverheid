@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/meesvanderkevie/Rijksoverheid#readme",
   "dependencies": {
-    "discord-anti-spam": "^2.7.3",
     "discord.js": "^13.8.1",
     "nodemon": "^2.0.19"
   }

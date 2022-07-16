@@ -1,3 +1,2 @@
 - DiscordJS
 - Nodemon
-- Discord Anti Spam

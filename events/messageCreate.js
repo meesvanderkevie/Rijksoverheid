@@ -2,6 +2,9 @@ const client = require('../index').client;
 const discord = require('discord.js');
 
 client.on('messageCreate', async message => {
+
+    if (message.author.bot) return;
+    
     let prefix = '-';
     let messageArray = message.content.split(' ');
     let cmd = messageArray[0];
@@ -12,10 +15,5 @@ client.on('messageCreate', async message => {
         commands.run(client, message, args, prefix);
         return;
     }
-    
-    if (message.author.bot) return;
 
-    if (message.content === 'ping') {
-        message.reply('pong');
-    }
 });

@@ -1,9 +1,11 @@
 const {MessageEmbed, discord } = require('discord.js');
 
 module.exports.run = async (client, message, args, prefix) => {
+    var developer = "ItzJustMees#1984";
+
     const infoEmbed = new MessageEmbed()
     .setTitle('Deze command is in onderhoud.')
-    .setDescription(`Deze bot is gemaakt door ${client.users.cache.get('723009841008120320').tag}`)
+    .setDescription(`Deze bot is gemaakt door ${developer}`)
 
     message.reply({embeds: [infoEmbed]});
 }

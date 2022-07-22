@@ -8,6 +8,7 @@ const fs = require('fs');
 client.commands = new Collection();
 client.events = new Collection();
 client.aliases = new Collection();
+client.SlashCmds = new Collection();
 module.exports.client = client;
 
 client.once('ready', () => {
@@ -51,6 +52,24 @@ fs.readdirSync(`./events/`).forEach(dir => {
             return console.log(err)
         }
     })
+});
+
+fs.readdirSync("./slashcommands").forEach(dir => {
+    fs.readdir(`./slashcommands/${dir}`, (err, files) => {
+        if(err) throw err;
+
+        var jsFiles = files.filter(f => f.split(".").pop() === "js");
+
+        jsFiles.forEach(file => {
+            var fileGet = require(`./slashcommands/${dir}/${file}`);
+            
+            try {
+                client.SlashCmds.set(fileGet.help.name, fileGet);
+            } catch (err) {
+                return console.log(err);
+            }
+        });
+    });
 });
 
 client.login(botConfig.token);
